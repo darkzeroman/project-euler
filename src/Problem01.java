@@ -4,7 +4,8 @@
 
 /**
  * @author dkz
- * 
+ * @Problem 01: Find the sum of all the multiples of 3 or 5 below
+ *              1000.
  */
 public class Problem01 {
 
