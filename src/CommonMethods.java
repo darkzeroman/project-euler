@@ -13,7 +13,12 @@ public class CommonMethods {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		benchmarkMethod();
+		//benchmarkMethod();
+		testOdd();
+	}
+	public static void testOdd(){
+		
+		System.out.println(11 & 0);
 	}
 
 	public static void benchmarkMethod() {

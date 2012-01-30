@@ -21,7 +21,7 @@ public class Problem02 {
 	}
 
 	public static void slowMethod() {
-		// just finding the fibonacci sequence and then adding it if it's
+		// just finding the fibonacci sequence and then adding it to an int if it's
 		// divisible by 2
 		int a = 1;
 		int b = 1;
