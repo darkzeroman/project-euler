@@ -6,7 +6,7 @@
  * @author dkz
  * 
  */
-public class Problem5 {
+public class Problem05 {
 
 	/**
 	 * @param args

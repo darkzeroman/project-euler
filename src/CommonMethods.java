@@ -18,7 +18,7 @@ public class CommonMethods {
 
 	public static void benchmarkMethod() {
 		long startTime = System.currentTimeMillis();
-		Problem1.slowMethod(1000000000);
+		Problem02.slowMethod();
 		long endTime = System.currentTimeMillis();
 		System.out.println("Total execution time: " + (endTime - startTime)
 				+ "ms");

@@ -6,7 +6,7 @@
  * @author dkz
  * 
  */
-public class Problem1 {
+public class Problem01 {
 
 	// Benchmarking:
 	// for n = 1000, SlowMethod: 1ms, FasterMethod:2ms

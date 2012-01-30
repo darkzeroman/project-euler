@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author dkz
  * 
  */
-public class Problem7 {
+public class Problem07 {
 
 	/**
 	 * @param args
