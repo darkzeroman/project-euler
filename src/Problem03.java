@@ -1,4 +1,4 @@
-public class Package03 {
+public class Problem03 {
 	// Benchmarking: slowMethod is inefficient because we aren't taking
 	// advantage of previous computations
 	
