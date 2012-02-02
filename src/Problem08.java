@@ -60,6 +60,9 @@ public class Problem08 {
 		System.out.println("Max: " + realmax);
 	}
 
+	/**
+	 * Converting to int array first Much much faster!
+	 */
 	public static void fasterMethod() {
 		int[] intarr = new int[num.length()];
 		for (int i = 0; i < 1000; i++)

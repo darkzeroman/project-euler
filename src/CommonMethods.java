@@ -19,7 +19,7 @@ public class CommonMethods {
 
 	public static void benchmarkMethod() {
 		long startTime = System.currentTimeMillis();
-		Problem08.fasterMethod();
+		Problem09.newMethod();
 		long endTime = System.currentTimeMillis();
 		System.out.println("Total execution time: " + (endTime - startTime)
 				+ "ms");
