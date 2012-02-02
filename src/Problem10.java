@@ -7,46 +7,51 @@
  * 
  */
 public class Problem10 {
-	BAD CODE
 	/**
 	 * @Problem: Find the sum of all the primes below two million.
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		slowMethod();
-
+		fasterMethod();
 	}
 
-	public static void slowMethod() {
+	// Implementation of Sieve of Eratosthenes
+	public static void fasterMethod() {
 		int max = 2000000;
 		boolean[] arr = new boolean[max];
+		for (int i = 0; i < max; i++)
+			arr[i] = true;
 
-		arr[0] = true;
-		arr[1] = true;
-		arr[2] = false;
+		arr[0] = false;
+		arr[1] = false;
+		arr[2] = true;
 
 		for (int i = 2; i < max; i++) {
-			if (!arr[i]) {
+			if (arr[i]) {
 				int interval = i;
-				i = i * 2;
-				while (i < max) {
-					arr[i] = true;
-					i += interval;
+				int index = interval * 2;
+				while (index < max) {
+					arr[index] = false;
+					index += interval;
 				}
 			}
-	
+
 		}
-
 		System.out.println(addArr(arr));
-
 	}
 
-	public static int addArr(boolean[] arr) {
-		int sum = 0;
-		for (int i = 0; i < arr.length; i++)
-			if (!arr[i])
-				sum += i;
+	public static void printArray(boolean[] arr) {
+		for (int i = 0; i < 50; i++)
+			if (arr[i])
+				System.out.print(i + " ");
+		System.out.println();
+	}
 
+	public static long addArr(boolean[] arr) {
+		long sum = 0;
+		for (int i = 0; i < arr.length; i++)
+			if (arr[i])
+				sum += i;
 		return sum;
 
 	}
