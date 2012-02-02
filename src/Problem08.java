@@ -13,16 +13,74 @@ public class Problem08 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		slowMethod();
+		betterMethod();
+		fasterMethod();
+
+	}
+
+	public static void slowMethod() {
+
 		// TODO Auto-generated method stub
 		int max = 0;
-		for (int i = 0; i < num.length()-5; i++) {
+		int startIndex = 0;
+		for (int i = 0; i < num.length() - 5; i++) {
 			int temp = Integer.parseInt(num.charAt(i) + "");
 			for (int j = 1; j < 5; j++)
-				temp = temp * Integer.parseInt(num.charAt(i+j) + "");
-			if (temp > max)
+				temp = temp * Integer.parseInt(num.charAt(i + j) + "");
+			if (temp > max) {
 				max = temp;
+				startIndex = i;
+			}
 		}
-		System.out.println(max);
+		System.out.println("Max: " + max);
+		// System.out.println(startIndex);
+	}
+
+	public static void betterMethod() {
+
+		// TODO Auto-generated method stub
+		int max = 0;
+		int startIndex = 0;
+		int realmax = 1;
+		for (int i = 0; i < num.length() - 5; i++) {
+			int temp = Integer.parseInt(num.charAt(i) + "");
+			for (int j = 0; j < 5; j++)
+				temp += Integer.parseInt(num.charAt(i + j) + "");
+			if (temp > max) {
+				max = temp;
+				startIndex = i;
+			}
+		}
+		for (int i = startIndex; i < startIndex + 5; i++) {
+			realmax = realmax * Integer.parseInt(num.charAt(i) + "");
+			// System.out.print(Integer.parseInt(num.charAt(i) + ""));
+		}
+		// System.out.println();
+		System.out.println("Max: " + realmax);
+	}
+
+	public static void fasterMethod() {
+		int[] intarr = new int[num.length()];
+		for (int i = 0; i < 1000; i++)
+			intarr[i] = Character.getNumericValue(num.charAt(i));
+		// Integer.parseInt(num.charAt(i) + ""); //Try this, but String
+		// operations are costly!
+
+		// TODO Auto-generated method stub
+		int max = 0;
+		int startIndex = 0;
+		for (int i = 0; i < num.length() - 5; i++) {
+			int temp = intarr[i];
+			for (int j = 1; j < 5; j++)
+				temp = temp * intarr[i + j];
+			if (temp > max) {
+				max = temp;
+				startIndex = i;
+			}
+		}
+		System.out.println("Max: " + max);
+		// System.out.println(startIndex);
 
 	}
 }

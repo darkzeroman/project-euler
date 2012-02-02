@@ -13,17 +13,13 @@ public class CommonMethods {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//benchmarkMethod();
-		testOdd();
-	}
-	public static void testOdd(){
-		
-		System.out.println(11 & 0);
+		benchmarkMethod();
+
 	}
 
 	public static void benchmarkMethod() {
 		long startTime = System.currentTimeMillis();
-		Problem02.slowMethod();
+		Problem08.fasterMethod();
 		long endTime = System.currentTimeMillis();
 		System.out.println("Total execution time: " + (endTime - startTime)
 				+ "ms");
