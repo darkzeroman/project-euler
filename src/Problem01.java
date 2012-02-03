@@ -20,7 +20,7 @@ public class Problem01 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		slowMethod(1000);
-		fastMethod(1000);
+		// fastMethod(1000);
 	}
 
 	public static void slowMethod(int n) {
