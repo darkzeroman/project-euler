@@ -36,13 +36,13 @@ public class Problem01 {
 	public static void fastMethod(int n) {
 		// inclusion/exclusion rules used from combinatorics
 		int sum;
-		sum = 5 * (findSummationOfOne(n / 5));
-		sum = sum + 3 * (findSummationOfOne(n / 3));
-		sum = sum - 15 * findSummationOfOne(n / 15);
+		sum = 5 * (findSummationOfOneTo(n / 5));
+		sum = sum + 3 * (findSummationOfOneTo(n / 3));
+		sum = sum - 15 * findSummationOfOneTo(n / 15);
 		System.out.println(sum);
 	}
 
-	public static int findSummationOfOne(int bound) {
+	public static int findSummationOfOneTo(int bound) {
 		return (int) Math.round(((Math.pow(bound, 2) + bound) / 2));
 	}
 }

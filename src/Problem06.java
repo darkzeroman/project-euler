@@ -1,8 +1,4 @@
 /**
- * 
- */
-
-/**
  * @author dkz
  * 
  */
@@ -19,7 +15,7 @@ public class Problem06 {
 		answerKey(max);
 
 	}
-
+	
 	public static void slowMethod(int max) {
 		// TODO Auto-generated method stub
 		int sumsquares = 0;
