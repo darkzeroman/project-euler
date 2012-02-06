@@ -1,13 +1,6 @@
-/**
- * 
- */
-
-/**
- * @author 01
- * 
- */
 public class Problem10 {
 	/**
+	 * @author Vidhur Vohra
 	 * @Problem: Find the sum of all the primes below two million.
 	 */
 	public static void main(String[] args) {
@@ -35,18 +28,13 @@ public class Problem10 {
 					index += interval;
 				}
 			}
-
 		}
 		System.out.println(addArr(arr));
 	}
 
-	public static void printArray(boolean[] arr) {
-		for (int i = 0; i < 50; i++)
-			if (arr[i])
-				System.out.print(i + " ");
-		System.out.println();
-	}
-
+	/**
+	 * Iterating array, if true, it should be a prime, and summing it
+	 */
 	public static long addArr(boolean[] arr) {
 		long sum = 0;
 		for (int i = 0; i < arr.length; i++)
@@ -72,4 +60,10 @@ public class Problem10 {
 		return true;
 	}
 
+	public static void printArray(boolean[] arr) {
+		for (int i = 0; i < 50; i++)
+			if (arr[i])
+				System.out.print(i + " ");
+		System.out.println();
+	}
 }
