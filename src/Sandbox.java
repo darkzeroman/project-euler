@@ -13,7 +13,8 @@ public class Sandbox {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(17%3);
+		char test = '5';
+		System.out.println(5/10);
 	}
 
 }

@@ -96,23 +96,6 @@ public class Problem11 {
 	}
 
 	/** Read the contents of the given file. */
-	public static void readToString() throws IOException {
-		File file = new File("inputs/Problem11.txt");
-
-		StringBuilder text = new StringBuilder();
-		String NL = System.getProperty("line.separator");
-		Scanner scanner = new Scanner(new FileInputStream(file));
-		try {
-			while (scanner.hasNextLine()) {
-				text.append(scanner.nextLine() + NL);
-			}
-		} finally {
-			scanner.close();
-		}
-		System.out.println(text);
-	}
-
-	/** Read the contents of the given file. */
 	public static int[][] readTo2DIntGrid() throws IOException {
 		int[][] grid = new int[20][20];
 		File file = new File("inputs/Problem11.txt");
