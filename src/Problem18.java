@@ -50,11 +50,11 @@ public class Problem18 {
 
 	/** Read the contents of the given file into an int grid. */
 	public static int[][] readTo2DIntGrid() throws IOException {
-		File file = new File("inputs/Problem18_2.txt");
+		File file = new File("inputs/Problem18.txt");
+		
 		// Finding number of lines
-
 		Scanner scanLines = new Scanner(new FileInputStream(file));
-		int count = 0;
+		int count = 0; 
 		try {
 			while (scanLines.hasNextLine()) {
 				scanLines.nextLine();
@@ -63,8 +63,10 @@ public class Problem18 {
 		} finally {
 			scanLines.close();
 		}
+		
 		int[][] grid = new int[count][count + 1];
 
+		// Getting file contents
 		Scanner scanner = new Scanner(new FileInputStream(file));
 		try {
 			for (int i = 0; i < 15; i++) {
