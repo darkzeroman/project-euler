@@ -59,8 +59,6 @@ public class Problem13 {
 		try {
 			for (int i = 0; i < 100; i++) {
 				String temp = scanner.next();
-				if (temp.length() != 50)
-					System.out.println("lol");
 				for (int j = 0; j < 50; j++) {
 					grid[i][j] = Character.getNumericValue(temp.charAt(j));
 				}
