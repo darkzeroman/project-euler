@@ -10,14 +10,13 @@ import java.util.StringTokenizer;
 import tools.ArrayMethods;
 import tools.QuickSort;
 
-public class Problem18 {
+public class Problem67 {
 	static int count = 0;
 
 	/**
 	 * @Problem Find the maximum total from top to bottom of the triangle below:
 	 */
 	public static void main(String[] args) {
-		// slowMethod();
 		fasterMethod();
 	}
 
@@ -42,40 +41,9 @@ public class Problem18 {
 		// System.out.println(Arrays.toString(grid[1]));
 	}
 
-	/**
-	 * Brute force Method
-	 */
-	public static void slowMethod() {
-		int[][] grid;
-		try {
-			grid = readTo2DIntGrid();
-			int[] combs = new int[16384];
-			slowMethodHelper(combs, grid, 0, 0, 0);
-			ArrayMethods.findMax(combs);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	public static void slowMethodHelper(int[] combs, int[][] grid, int sum,
-			int row, int col) {
-		sum = sum + grid[row][col];
-
-		if (grid.length - 1 == row) {
-			combs[count++] = sum;
-			return;
-		}
-		if (col < grid[0].length - 1) {
-			slowMethodHelper(combs, grid, sum, row + 1, col);
-			slowMethodHelper(combs, grid, sum, row + 1, col + 1);
-		} else
-			slowMethodHelper(combs, grid, sum, row + 1, col);
-	}
-
 	/** Read the contents of the given file into an int grid. */
 	public static int[][] readTo2DIntGrid() throws IOException {
-		File file = new File("inputs/Problem18.txt");
+		File file = new File("inputs/Problem67.txt");
 
 		// Finding number of lines
 		Scanner scanLines = new Scanner(new FileInputStream(file));
@@ -94,7 +62,7 @@ public class Problem18 {
 		// Getting file contents
 		Scanner scanner = new Scanner(new FileInputStream(file));
 		try {
-			for (int i = 0; i < 15; i++) {
+			for (int i = 0; i < 100; i++) {
 				String temp = scanner.nextLine();
 				StringTokenizer st = new StringTokenizer(temp);
 
